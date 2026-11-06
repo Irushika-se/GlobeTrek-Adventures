@@ -1,0 +1,136 @@
+
+
+/* Overall dashboard layout */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar fixed width */
+.sidebar-col {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+/* Main content area */
+.main-col {
+    flex: 1;
+    background-color: #f0f2f5;
+    padding: 1.5rem;
+    overflow-x: hidden;
+}
+
+/* Dashboard top bar */
+.dash-topbar {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-topbar h5 {
+    margin: 0;
+    color: #0b2945;
+    font-weight: 600;
+}
+
+.dash-topbar .user-info {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Content card inside dashboard */
+.dash-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.dash-card h5 {
+    font-weight: 600;
+    color: #0b2945;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #f2a900;
+    padding-bottom: 0.5rem;
+}
+
+/* Stats row cards */
+.stat-box {
+    background: white;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+    border-left: 4px solid #f2a900;
+    margin-bottom: 1rem;
+}
+
+.stat-box .number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0b2945;
+    line-height: 1;
+}
+
+.stat-box .label {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+.stat-box .icon {
+    font-size: 2rem;
+    color: #f2a900;
+    opacity: 0.6;
+}
+
+/* Table inside dashboard */
+.dash-table {
+    font-size: 0.875rem;
+}
+
+.dash-table thead th {
+    background-color: #0b2945;
+    color: white;
+    border: none;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+}
+
+.dash-table tbody td {
+    padding: 0.7rem 1rem;
+    vertical-align: middle;
+    border-color: #f0f0f0;
+}
+
+.dash-table tbody tr:hover {
+    background-color: #fffbf0;
+}
+
+/* Mobile sidebar collapse */
+@media (max-width: 768px) {
+    .sidebar-col {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .gt-sidebar {
+        min-height: auto;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .dashboard-wrapper {
+        flex-direction: column;
+    }
+
+    .main-col {
+        padding: 1rem;
+    }
+}
+
